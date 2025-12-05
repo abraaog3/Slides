@@ -27,8 +27,16 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Check deploy token
+        run: |
+          if [ -z "${{ secrets.GH_PAGES_PAT }}" ]; then
+            echo "GH_PAGES_PAT is not set — workflow will try GITHUB_TOKEN as fallback (may fail if permissions restricted)"
+          else
+            echo "GH_PAGES_PAT is set"
+          fi
+
       - name: Deploy to gh-pages via peaceiris
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_PAGES_PAT }}
+          github_token: ${{ secrets.GH_PAGES_PAT || github.token }}
           publish_dir: ./dist
