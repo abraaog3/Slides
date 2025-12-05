@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: #F9F8F4;
+  color: #1a1a1a;
+}
+
+@media print {
+  nav, footer, button {
+    display: none !important;
+  }
+}
