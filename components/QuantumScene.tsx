@@ -3,18 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 
-// FIX: Imports are moved to the top of the file for proper module resolution before they are used in `declare global`.
 import React, { useRef } from 'react';
-import { Canvas, useFrame, ThreeElements } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Sphere, Torus, Cylinder, Stars, Environment, Box } from '@react-three/drei';
 import * as THREE from 'three';
-
-// Augment the JSX namespace to include Three.js elements
-declare global {
-  namespace JSX {
-    interface IntrinsicElements extends ThreeElements {}
-  }
-}
 
 const QuantumParticle = ({ position, color, scale = 1 }: { position: [number, number, number]; color: string; scale?: number }) => {
   const ref = useRef<THREE.Mesh>(null);

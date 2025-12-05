@@ -9,16 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.4.0",
-    "@supabase/supabase-js": "2",
-    "framer-motion": "^12.23.24",
-    "html2pdf.js": "^0.12.1",
-    "lucide-react": "^0.553.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "three": "0.173.0"
+    "@react-three/fiber": "^9.4.0",
+    "@react-three/drei": "^10.7.7",
+    "three": "0.173.0",
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.553.0",
+    "@supabase/supabase-js": "2"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
